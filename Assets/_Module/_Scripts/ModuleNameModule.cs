@@ -10,27 +10,27 @@ using UnityEngine;
 public class ModuleNameModule : MonoBehaviour {
 
     // ! Remove KMBombInfo and KMAudio if not used.
-    private KMBombInfo _bombinfo;
+    private KMBombInfo _bombInfo;
     private KMAudio _audio;
     private KMBombModule _module;
 
     // * _isSolved should be kept even if not needed, to help with future souvenir implementation.
-    private static int _moduleCount;
+    private static int s_moduleCount;
     private int _moduleId;
     private bool _isSolved;
 
     // * Awake is called before anything else.
     private void Awake() {
-        _moduleId = _moduleCount++;
+        _moduleId = s_moduleCount++;
 
-        _bombinfo = GetComponent<KMBombInfo>();
+        _bombInfo = GetComponent<KMBombInfo>();
         _audio = GetComponent<KMAudio>();
         _module = GetComponent<KMBombModule>();
 
         // ! Remove if not used.
         _module.OnActivate += Activate;
-        _bombinfo.OnBombExploded += OnBombExploded;
-        _bombinfo.OnBombSolved += OnBombSolved;
+        _bombInfo.OnBombExploded += OnBombExploded;
+        _bombInfo.OnBombSolved += OnBombSolved;
 
         // ! Declare other references here if needed.
     }
@@ -69,6 +69,7 @@ public class ModuleNameModule : MonoBehaviour {
     public void Solve() {
         Log("◯ Module solved.");
         _module.HandlePass();
+        _isSolved = true;
         // ! Add code that should execute on solve (eg. a solve animation) here.
     }
 
