@@ -7,7 +7,7 @@ using UnityEngine;
 // * Template Wiki: https://github.com/TheKuroEver/KTaNE-Module-Template/wiki
 // * KModKit Documentation: https://github.com/Qkrisi/ktanemodkit/wiki
 // ! Remember that the class and file names have to match.
-public class ModuleNameModule : MonoBehaviour {
+public class ModuleModule : MonoBehaviour {
 
     // ! Remove KMBombInfo and KMAudio if not used.
     private KMBombInfo _bombInfo;
