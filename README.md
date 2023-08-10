@@ -1,3 +1,6 @@
+I use this repo for testing things. For help making mods, see my guide, [here](https://github.com/TheKuroEver/KTaNE-Module-Template/wiki).
+
+
 Community fork of the KTaNE Modkit.
 
 The [original (official) modkit](https://github.com/keeptalkinggame/ktanemodkit) isn't going to receive updates anymore. This is the fork that will be maintained from now on.
