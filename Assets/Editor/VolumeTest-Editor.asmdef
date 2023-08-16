@@ -1,0 +1,10 @@
+{
+  "name": "VolumeTest-Editor",
+  "references": [
+    "VolumeTest"
+  ],
+  "includePlatforms": [
+    "Editor"
+  ],
+  "excludePlatforms": []
+}
